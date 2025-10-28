@@ -479,7 +479,7 @@ const Editor = () => {
       const url = URL.createObjectURL(file);
       setPdfUrl(url);
       setShowPdfPreview(true);
-      setActiveTab('pdf');
+      setActiveTab('text');
       const pages: {
         [key: number]: string;
       } = {};
@@ -792,10 +792,12 @@ const Editor = () => {
               size="icon"
               onClick={() => setShowAbbreviationSettings(true)}
               className="hover:bg-primary/10 hover:text-primary transition-colors rounded-lg"
-              title="Manage text abbreviations"
+              title="Abbreviations"
             >
               <Settings2 className="h-4 w-4" />
+              
             </Button>
+           
           </div>
           
           <div className="flex items-center gap-3">
@@ -849,7 +851,6 @@ const Editor = () => {
           <div className="px-4 pb-2">
             <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as 'text' | 'pdf')}>
               <TabsList>
-                <TabsTrigger value="pdf">PDF Editor</TabsTrigger>
                 <TabsTrigger value="text">Text Editor</TabsTrigger>
               </TabsList>
             </Tabs>
@@ -959,9 +960,6 @@ const Editor = () => {
                 </Button>
               </div>
 
-              <div className="ml-auto text-xs text-muted-foreground bg-background/50 px-2 py-1 rounded">
-                Keyboard shortcuts enabled
-              </div>
             </div>
           </div>}
       </header>

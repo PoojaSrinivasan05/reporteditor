@@ -105,7 +105,7 @@ export const AbbreviationSettings = ({
       <Dialog open={isOpen} onOpenChange={onClose}>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
-            <DialogTitle>Manage Text Abbreviations</DialogTitle>
+            <DialogTitle>Abbrevations</DialogTitle>
             <DialogDescription>
               Create shortcuts that expand into full paragraphs when you type them.
             </DialogDescription>
@@ -155,8 +155,8 @@ export const AbbreviationSettings = ({
                   </>
                 ) : (
                   <>
-                    <Plus className="w-4 h-4 mr-2" />
-                    Add Abbreviation
+
+                    Submit
                   </>
                 )}
               </Button>

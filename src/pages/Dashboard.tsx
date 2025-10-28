@@ -246,7 +246,7 @@ const Dashboard = () => {
         {/* Header */}
         <header className="mb-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Dashboard Editor
+            Report Editor Dashboard 
           </h1>
           <p className="text-muted-foreground text-lg">Manage your PDF reports with ease</p>
         </header>
@@ -263,15 +263,6 @@ const Dashboard = () => {
               className="pl-10 h-12 bg-card shadow-soft border-border/50 focus:shadow-hover transition-all duration-300"
             />
           </div>
-          <Button
-            onClick={handleUploadPDF}
-            size="lg"
-            variant="outline"
-            className="h-12 px-6 shadow-soft hover:shadow-hover transition-all duration-300 hover:scale-105"
-          >
-            <FileUp className="mr-2 h-5 w-5" />
-            Upload PDF
-          </Button>
           <Button
             onClick={handleNewReport}
             size="lg"
